@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dental Reservation Form</title>
+    <style>
+        * {
+          padding: 0;
+          margin: 0;  
+          box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .dental-form {
+            background-color: #dfd3d3;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+        }
+
+        .dental-form h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #202020;
+        }
+
+        .dental-form label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        .dental-form input[type="text"],
+        .dental-form input[type="number"],
+        .dental-form input[type="date"],
+        .dental-form input[type="time"],
+        .dental-form select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            margin-bottom: 20px;
+        }
+
+        .dental-form input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background-color: #fbb03b;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .dental-form input[type="submit"]:hover {
+            background-color: #d89528;
+        }
+    </style>
+</head>
+<body>
+    <form action="submit_reservation.php" method="POST" class="dental-form">
+        <h2>Dental Reservation Form</h2>
+        <!--ANSWER HERE-->
+            <label for="Request title">Request</label>
+            <input type="text" id="title" name="title" placeholder="Enter Request" required>
+      
+            <label for="description">Brief Description</label>
+            <textarea id="description" name="description" rows="4" placeholder="Enter a brief description of the Request" required></textarea>
+
+            <label for="Name of the Requestor">Request</label>
+            <input type="text" id="title" name="title" placeholder="Enter full Name" required>
+    
+            <label for="pub_date"> Due Date Field</label>
+            <input type="date" id="pub_date" name="Date_field" required>
+            <input type="time" name="Scheduling" class="Input time" required>
+    
+            <label for="category">Support Category</label>
+            <select id="category" name="category" required>
+                <option disabled selected> Select a Category</option>
+                <option value="Data_Cor">Data correction</option>
+                <option value="tech_sup">Technical Support</option>
+                <option value="prog_ins">Program Installation</option>
+                <option value="others">others</option>
+            </select>
+    
+            <input type="submit" value="Register Request">
+
+
+        <!--END ANSWER HERE-->
+    </form>
+
+</body>
+</html>

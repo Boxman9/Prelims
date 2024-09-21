@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prelim - Form Types</title>
+</head>
+<body>
+    <header>
+        <h1>Prelim - Form Types</h1>
+    </header>
+    
+    <section id="forms-related">
+        <h3>Create the necessary HTML web form elements that best fit for the following scenario. 5pts each. Each case should be under form element and with proper working button. Observe proper indentation and labeling.</h3>
+        
+        <!-- EXAMPLE PROBLEM -->
+        A meeting for tomorrow requires user confirmation to join or not. 
+        Write the correct form output for the above case.
+
+        <form>
+            <label>Do you wish to join?</label><br>
+            <input type="radio" name="confirmation_status" id="yes">
+            <label for="yes">Yes</label>
+            <input type="radio" name="confirmation_status" id="no">
+            <label for="no">No</label><br><br>
+            <input type="submit" value="Confirm">
+        </form>
+        <!-- EXAMPLE PROBLEM -->
+
+        <div style="margin-top: 2rem;">
+            <ol>    
+                <!-- CASE 1: File Upload Form -->
+                <li style="margin-bottom: 0.5rem;"><strong>CASE: 1</strong></li>
+                <form action="/upload" method="post" enctype="multipart/form-data">
+                    <label for="documents">Upload Document(s):</label><br>
+                    <input type="file" id="documents" name="documents" accept=".doc, .docx, .pdf" multiple><br><br>
+                    <input type="submit" value="Upload">
+                </form>
+                <!-- END CASE 1 -->
+
+                <!-- CASE 2: Attendance Status Form -->
+                <li style="margin-bottom: 0.5rem;"><strong>CASE: 2</strong></li>
+                <form action="/attendance" method="post">
+                    <label for="student">Select Student Attendance Status:</label><br>
+                    <select id="student" name="attendance_status">
+                        <option value="Present">Present</option>
+                        <option value="Excuse">Excuse</option>
+                        <option value="Late">Late</option>
+                        <option value="Absent">Absent</option>
+                    </select><br><br>
+                    <input type="submit" value="Submit Attendance">
+                </form>
+                <!-- END CASE 2 -->
+
+                <!-- CASE 3: Interests Selection Form -->
+                <li style="margin-bottom: 0.5rem;"><strong>CASE: 3</strong></li>
+                <form action="/interests" method="post">
+                    <label for="interests">Select your Interests:</label><br>
+                    <input type="checkbox" id="arts" name="interests" value="Arts">
+                    <label for="arts">Arts</label><br>
+                    <input type="checkbox" id="sciences" name="interests" value="Sciences">
+                    <label for="sciences">Sciences</label><br>
+                    <input type="checkbox" id="tech" name="interests" value="Technologies">
+                    <label for="tech">Technologies</label><br><br>
+                    <input type="submit" value="Submit Interests">
+                </form>
+                <!-- END CASE 3 -->
+
+                <!-- CASE 4: Week Selection Form -->
+                <li style="margin-bottom: 0.5rem;"><strong>CASE: 4</strong></li>
+                <form action="/training" method="post">
+                    <label for="week">Select Available Training Week:</label><br>
+                    <input type="date" id="week" name="week" min="2024-09-16"><br><br>
+                    <input type="submit" value="Submit Week">
+                </form>
+                <!-- END CASE 4 -->
+
+                <!-- CASE 5: Birthdate Input Form -->
+                <li style="margin-bottom: 0.5rem;"><strong>CASE: 5</strong></li>
+                <form action="/birthdate" method="post">
+                    <label for="birthdate">Enter Your Birthdate:</label><br>
+                    <input type="date" id="birthdate" name="birthdate"><br><br>
+                    <input type="submit" value="Submit Birthdate">
+                </form>
+                <!-- END CASE 5 -->
+            </ol>
+        </div>
+    </section>
+</body>
+</html>
